@@ -1,0 +1,152 @@
+1) function a(){
+2)    console.log('hello');
+3) }
+4) console.log('Dojo');
+
+Dojo
+
+1) function a(){
+2)   console.log('hello');
+3)   return 15;
+4) }
+5) x = a();
+6) console.log('x is', x);
+
+x is
+hello
+15
+
+
+1) function a(n){
+2)   console.log('n is', n);
+3)   return n+15;
+4) }
+5) x = a(3);
+6) console.log('x is', x);
+
+x is
+3 is
+3
+18
+
+1) function a(n){
+2)   console.log('n is', n);
+3)   y = n*2;
+3)   return y;
+4) }
+5) x = a(3) + a(5);
+6) console.log('x is', x);
+
+3 is
+3
+6
++
+5 is
+5
+10
+x is
+16
+
+1) function op(a,b){
+2)   c = a+b;
+3)   console.log('c is', c);
+4)   return c;
+5) }
+6) x = op(2,3) + op(3,5);
+7) console.log('x is', x);
+
+c is
+5
++
+c is
+8
+x is
+13
+
+1) function op(a,b){
+2)   c = a+b;
+3)   console.log('c is', c);
+4)   return c;
+5) }
+6) x = op(2,3) + op(3,op(2,1)) + op(op(2,1),op(2,3));
+7) console.log('x is', x)
+
+c is
+5
++
+c is
+c is
+3
+6
+c is
+c is
+3
+c is
+c is
+5
+8
+x is 
+19
+
+1) x = 15;
+2) function a(){
+3)   x = 10;
+4) }
+5) console.log(x);
+6) a();
+7) console.log(x);
+
+15
+10
+
+for(var i=0; i<3; i++){
+   for(var j=0; j<2; j++){?      
+       console.log(i*j);
+   }
+}
+       
+________________________
+    i   | 0->1->2->3
+    j	| 0->1->2->0->1->2->0->1->2	
+   C.L.	| 0,0,0,1,0,2
+	|
+	|	
+	|
+
+
+function looping(3,3){
+   for(var i=0; i<3; i++){
+      for(var j=0; j<3; j++){?        
+          console.log(i*j);
+      } 
+   }
+}
+z = looping(3,3);
+console.log(z);
+
+
+i = 0->1->2->3
+j = 0->1->2->3->0->1->2->3->0->1->2->3
+C.L(i*j) = 0,0,0,0,1,2,0,2,4
+C.L(z)=looping(3,3)
+
+function looping(3,5){
+   for(var i=0; i<3; i++){
+      for(var j=0; j<5; j++){?        
+         console.log(i*j);
+      } 
+   }
+   return x*y;
+}
+z = looping(3,5);
+console.log(z);
+
+i = 0->1->2->3
+j = 0->1->2->3->4->5->0->1->2->3->4->5->0->1->2->3->4->5
+C.L.(i*j) = 0,0,0,0,0,0,1,2,3,4,0,2,4,6,8
+return = 15
+C.L.(z) = undefined  
+
+
+
+                                                                        
